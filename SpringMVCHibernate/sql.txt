@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS `testdb`
+
+CREATE TABLE `country` (
+  `countryId` int(11) NOT NULL,
+  `countryName` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `country` (`countryId`, `countryName`) VALUES
+(1, 'Việt Nam'),
+(2, 'Nhật Bản');
+
+
+CREATE TABLE `person` (
+  `id` int(11) NOT NULL,
+  `countryId` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `gender` bit(1) NOT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
